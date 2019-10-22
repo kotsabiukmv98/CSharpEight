@@ -6,7 +6,8 @@ namespace CSharpEight
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World");
+            UsingDeclarations.FirstDemo();
+
         }
     }
 }
