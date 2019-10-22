@@ -9,7 +9,8 @@ namespace CSharpEight
             //UsingDeclarations.FirstDemo();
             //DisposableRefStructs.Demo();
             //EnhancementOfInterpolatedVerbatimStrings.Demo();
-            IndicesAndRanges.IndexDemo();
+            //IndicesAndRanges.IndexDemo();
+            DefaultInterfaceMethods.Demo();
         }
     }
 }

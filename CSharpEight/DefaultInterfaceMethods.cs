@@ -19,8 +19,8 @@ namespace CSharpEight
 
     public interface IFriendlyHuman : IHuman
     {
-        void IHuman.SayHello()
-        //new void SayHello()
+        //void IHuman.SayHello()
+        new void SayHello()
         {
             Console.WriteLine($"Greeting, my name is {Name}");
         }
