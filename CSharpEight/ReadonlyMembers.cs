@@ -1,5 +1,5 @@
 ﻿/*
- * You can apply the readonly modifier to any member of a struct. 
+ * You can apply the readonly modifier to any member of a STRUCT. 
  * It indicates that the member does not modify state.It's more 
  * granular than applying the readonly modifier to a struct declaration. 
  */
