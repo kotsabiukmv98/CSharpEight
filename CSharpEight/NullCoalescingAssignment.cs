@@ -11,7 +11,7 @@ namespace CSharpEight
 {
     public class NullCoalescingAssignment
     {
-        static public void Demo(IList<int> numbers)
+        public static void Demo(IList<int> numbers)
         {
             //if (numbers == null)
             //{

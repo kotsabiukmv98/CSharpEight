@@ -34,7 +34,7 @@ namespace CSharpEight
 
     class UnmanagedConstructedTypes
     {
-        static public void Demo()
+        public static void Demo()
         {
             Span<Point<int>> coordinates = stackalloc[]
             {

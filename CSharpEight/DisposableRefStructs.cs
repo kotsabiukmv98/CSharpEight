@@ -21,7 +21,7 @@ namespace CSharpEight
 
     public class DisposableRefStructs
     {
-        static public void Demo()
+        public static void Demo()
         {
             using (var rectangle = new Rectangle())
             {

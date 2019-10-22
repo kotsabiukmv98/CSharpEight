@@ -25,7 +25,7 @@ namespace CSharpEight
 
     class UsingDeclarations
     {
-        static public void FirstDemo()
+        public static void FirstDemo()
         {
             using (var a = new A())
             {

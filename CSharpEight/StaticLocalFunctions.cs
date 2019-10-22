@@ -7,7 +7,7 @@ namespace CSharpEight
 {
     public class StaticLocalFunctions
     {
-        static public int FirstDemo()
+        public static int FirstDemo()
         {
             int y = -9;
             int x = 2;
