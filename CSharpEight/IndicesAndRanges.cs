@@ -9,7 +9,7 @@ namespace CSharpEight
 {
     public class IndicesAndRanges
     {
-        private static string[] weekDays = new string[]
+        private static readonly string[] weekDays = new string[]
         {
                                 // index from start                index from end
             "Monday",           // 0                               ^7
@@ -35,6 +35,8 @@ namespace CSharpEight
 
             
             Console.WriteLine($"The last week day is {weekDays[^1]}"); // weekDays[^0] - IndexOutOfRangeException 😱😱😱
+
+            Console.WriteLine("" , i0, i1, i2, i3, i4, i5, i6, i7, i8);
         }
 
         public static void RangeDemo()
@@ -61,6 +63,8 @@ namespace CSharpEight
             var arr4 = arr[0..^0];
 
             //var subStr = "hello, world"[8..3]; // ArgumentOutOfRangeException 😱😱😱
+            
+            Console.WriteLine("", r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, arr2, arr3, arr4);
         }
     }
 }

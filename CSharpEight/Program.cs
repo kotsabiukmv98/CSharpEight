@@ -4,12 +4,12 @@ namespace CSharpEight
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             //UsingDeclarations.FirstDemo();
             //DisposableRefStructs.Demo();
             //EnhancementOfInterpolatedVerbatimStrings.Demo();
-            IndicesAndRanges.RangeDemo();
+            IndicesAndRanges.IndexDemo();
         }
     }
 }
