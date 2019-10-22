@@ -7,8 +7,9 @@ namespace CSharpEight
         static void Main(string[] args)
         {
             //UsingDeclarations.FirstDemo();
-            DisposableRefStructs.Demo();
-            EnhancementOfInterpolatedVerbatimStrings.Demo();
+            //DisposableRefStructs.Demo();
+            //EnhancementOfInterpolatedVerbatimStrings.Demo();
+            IndicesAndRanges.RangeDemo();
         }
     }
 }
