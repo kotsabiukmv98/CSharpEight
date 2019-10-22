@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * A using declaration is a variable declaration preceded by the using keyword. 
+ * It tells the compiler that the variable being declared should be disposed at 
+ * the end of the enclosing scope.
+ */
+
+using System;
 
 namespace CSharpEight
 {
