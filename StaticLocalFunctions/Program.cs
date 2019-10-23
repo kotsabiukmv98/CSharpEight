@@ -2,24 +2,27 @@
  * You can now add the static modifier to local functions to ensure that local 
  * function doesn't capture (reference) any variables from the enclosing scope. 
  */
+ using System;
 
-namespace CSharpEight
+namespace StaticLocalFunctions
 {
-    public class StaticLocalFunctions
+    class Program
     {
-        public static int FirstDemo()
+        static void Main()
         {
-            int y = -9;
             int x = 2;
+            int y = -9;
 
-            return Product(x, y);
+            var product =  Product(x, y);
 
+            //static int Product(int firstMultiplier, int secondMultiplier)
             int Product(int firstMultiplier, int secondMultiplier)
-            //static int Add(int left, int right)
             {
-                y = 0;
+                //y = 0;
                 return firstMultiplier * secondMultiplier;
             };
+
+            Console.WriteLine(product);
         }
     }
 }
