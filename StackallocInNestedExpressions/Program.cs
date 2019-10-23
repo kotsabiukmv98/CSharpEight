@@ -3,17 +3,16 @@
  * is of the System.Span<T> or System.ReadOnlySpan<T> type, you 
  * can use the stackalloc expression in other expressions:
  */
-
 using System;
 
-namespace CSharpEight
+namespace StackallocInNestedExpressions
 {
-    public class StackallocInNestedExpressions
+    class Program
     {
-        public static void Demo()
+        static void Main()
         {
             Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
-            var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6, 8 });
+            var ind = numbers.IndexOfAny(stackalloc[] { 8, 6, 4, 2 });
 
             //Span<int> span = stackalloc[] { 2, 4, 6, 8 };
             //var ind = numbers.IndexOfAny(span);
