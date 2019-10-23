@@ -6,9 +6,10 @@
  */
 using System;
 
-namespace CSharpEight
+
+namespace DisposableRefStructs
 {
-    public /*ref*/ struct Rectangle : IDisposable
+    public ref struct Rectangle// : IDisposable
     {
         public double Width { get; set; }
         public double Height { get; set; }
@@ -18,15 +19,11 @@ namespace CSharpEight
             Console.WriteLine("Rectangle instance was Disposed!");
         }
     }
-
-    public class DisposableRefStructs
+    class Program
     {
-        public static void Demo()
+        static void Main()
         {
-            using (var rectangle = new Rectangle())
-            {
-                // Some business logic
-            }
+            using var rectangle = new Rectangle();
         }
     }
 }

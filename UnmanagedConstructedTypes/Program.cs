@@ -10,10 +10,9 @@
     * Any pointer type
     * Any user-defined struct type that contains fields of unmanaged types only and, a constructed type that includes only unmanaged type arguments
  */
+ using System;
 
-using System;
-
-namespace CSharpEight
+namespace UnmanagedConstructedTypes
 {
     public class IntClass
     {
@@ -31,10 +30,9 @@ namespace CSharpEight
         public T X;
         public T Y;
     }
-
-    class UnmanagedConstructedTypes
+    class Program
     {
-        public static void Demo()
+        static void Main()
         {
             Span<Point<int>> coordinates = stackalloc[]
             {
@@ -58,16 +56,16 @@ namespace CSharpEight
             //};
 
 
-            //// Add AllowUnsafeBlocks in .csproj file
-            //unsafe
-            //{
-            //    var pointer = stackalloc[]
-            //    {
-            //        new Point<int> { X = 0, Y = 0 },
-            //        new Point<int> { X = 0, Y = 3 },
-            //        new Point<int> { X = 4, Y = 0 }
-            //    };
-            //}
+            // Add AllowUnsafeBlocks in .csproj file
+            unsafe
+            {
+                var pointer = stackalloc[]
+                {
+                    new Point<int> { X = 0, Y = 0 },
+                    new Point<int> { X = 0, Y = 3 },
+                    new Point<int> { X = 4, Y = 0 }
+                };
+            }
         }
     }
 }

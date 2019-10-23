@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticLocalFunctions", "Sta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingDeclarations", "UsingDeclarations\UsingDeclarations.csproj", "{90321628-311A-4ED0-855D-E24BDA858781}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisposableRefStructs", "DisposableRefStructs\DisposableRefStructs.csproj", "{1292EC9B-16EF-4197-92F8-71FEA3FC7AEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnmanagedConstructedTypes", "UnmanagedConstructedTypes\UnmanagedConstructedTypes.csproj", "{E3F49D93-E79E-4F4D-A786-265047F286E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{90321628-311A-4ED0-855D-E24BDA858781}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90321628-311A-4ED0-855D-E24BDA858781}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90321628-311A-4ED0-855D-E24BDA858781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1292EC9B-16EF-4197-92F8-71FEA3FC7AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1292EC9B-16EF-4197-92F8-71FEA3FC7AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1292EC9B-16EF-4197-92F8-71FEA3FC7AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1292EC9B-16EF-4197-92F8-71FEA3FC7AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F49D93-E79E-4F4D-A786-265047F286E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F49D93-E79E-4F4D-A786-265047F286E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F49D93-E79E-4F4D-A786-265047F286E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F49D93-E79E-4F4D-A786-265047F286E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
