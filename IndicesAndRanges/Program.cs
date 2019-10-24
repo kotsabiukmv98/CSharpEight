@@ -2,13 +2,18 @@
  * Indices and ranges provide a succinct syntax for accessing single 
  * elements or ranges in a sequence.
  */
+ using System;
 
-using System;
-
-namespace CSharpEight
+namespace IndicesAndRanges
 {
-    public class IndicesAndRanges
+    class Program
     {
+        public static void Main()
+        {
+            IndexDemo();
+            RangeDemo();
+        }
+
         private static readonly string[] weekDays = new string[]
         {
                                 // index from start                index from end
@@ -21,22 +26,22 @@ namespace CSharpEight
             "Sunday",           // 6                               ^1
                                 // 7 (or words.Length)             ^0
         };
+
         public static void IndexDemo()
         {
             var i0 = new Index();
             var i1 = new Index(value: 0, fromEnd: false);
-            var i2 = (Index)1;
-            Index i3 = 5;
+            Index i2 = 5;
+            var i3 = (Index)1;
             var i4 = Index.FromStart(1);
             var i5 = Index.FromEnd(2);
             var i6 = Index.End;
             var i7 = Index.Start;
             var i8 = ^0;
 
-            
             Console.WriteLine($"The last week day is {weekDays[^1]}"); // weekDays[^0] - IndexOutOfRangeException 😱😱😱
 
-            Console.WriteLine("" , i0, i1, i2, i3, i4, i5, i6, i7, i8);
+            Console.WriteLine("", i0, i1, i2, i3, i4, i5, i6, i7, i8);
         }
 
         public static void RangeDemo()
@@ -48,7 +53,7 @@ namespace CSharpEight
             var r1 = new Range(i1, i2);
             var r2 = Range.All;
             var r3 = Range.EndAt(i1);
-            var r4 = Range.EndAt(i2);
+            var r4 = Range.StartAt(i2);
 
             var r5 = i1..i2; // new Range(i1, i2)
             var r6 = i1..;   // new Range(i1, new Index(0, true))
@@ -63,7 +68,7 @@ namespace CSharpEight
             var arr4 = arr[0..^0];
 
             //var subStr = "hello, world"[8..3]; // ArgumentOutOfRangeException 😱😱😱
-            
+
             Console.WriteLine("", r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, arr2, arr3, arr4);
         }
     }
