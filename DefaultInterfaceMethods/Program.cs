@@ -2,10 +2,9 @@
  * You can now add members to interfaces and provide an implementation for those members.
  * Often use-case: post factum adding new members to exicting API
  */
+ using System;
 
-using System;
-
-namespace CSharpEight
+namespace DefaultInterfaceMethods
 {
     public interface IHuman
     {
@@ -19,14 +18,14 @@ namespace CSharpEight
 
     public interface IFriendlyHuman : IHuman
     {
-        //void IHuman.SayHello()
-        new void SayHello()
+        void IHuman.SayHello()
+        //new void SayHello()
         {
             Console.WriteLine($"Greeting, my name is {Name}");
         }
     }
 
-    public class Human : IHuman
+    public class Human : IFriendlyHuman
     {
         public string Name { get; set; }
     }
@@ -42,7 +41,7 @@ namespace CSharpEight
             human1.SayHello();
 
             ((IHuman)human).SayHello();
-            
+
 
             //var h = new NewHuman();
             //(h as IHuman).SayHello();
@@ -59,4 +58,12 @@ namespace CSharpEight
     //{
     //    public string Name { get; set; }
     //}
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
 }

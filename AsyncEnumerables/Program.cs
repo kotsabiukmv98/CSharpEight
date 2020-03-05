@@ -14,20 +14,18 @@ namespace AsyncEnumerables
     {
         public static IEnumerable<int> GenerateSequence()
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 5; i++)
             {
-                //await LongRunningOperationAsync();//.GetAwaiter().GetResult();
                 LongRunningOperation();
                 yield return i;
             }
         }
 
-        public static async IAsyncEnumerable<int> GenerateSequenceAsync()
+        static void Main()
         {
-            for (int i = 0; i < 3; i++)
+            foreach (var number in GenerateSequence())
             {
-                await LongRunningOperationAsync();
-                yield return i;
+                Console.WriteLine(number);
             }
         }
 
@@ -41,19 +39,5 @@ namespace AsyncEnumerables
             await Task.Delay(2000);
         }
 
-        static async Task Main()
-        {
-            foreach (var number in GenerateSequence())
-            {
-                Console.WriteLine(number);
-            }
-
-            await foreach (var number in GenerateSequenceAsync())
-            {
-                Console.WriteLine(number);
-            }
-
-            Console.WriteLine("Kolia");
-        }
     }
 }
